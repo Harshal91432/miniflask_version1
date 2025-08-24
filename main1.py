@@ -22,7 +22,7 @@ from flask import Flask
 
 
 # `Flask` is a class we use to instantiate an application
-app = Flask(__name__)
+app = Flask(__name__)   # pass the current module name
 
 
 # First http GET request
@@ -36,3 +36,13 @@ def hello_world():
 def custom_message():
     return "<h1>Good Morning</h1>"  # h1 header make word bolt
     #return "<p>Good Morning</p>"
+
+# # SECOND http GET request
+# @app.route("/greeting")
+# def custom_message():
+#
+#     import requests
+#
+#     response = requests.get("https://swapi.dev/api/films/1")
+#     # store response in DB
+#     return "<h1>data has been saved in DB</h1"
